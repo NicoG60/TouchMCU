@@ -347,12 +347,13 @@ All note mapping is on Channel 0 (the first one).
 |       Control        |  C5  |  72  |  48  |
 |         Alt          | C#5  |  73  |  49  |
 |                      |      |      |      |
-|       Read/Off        |  D5  |  74  |  4A  |
+|       Read/Off       |  D5  |  74  |  4A  |
 |        Write         | D#5  |  75  |  4B  |
 |         Trim         |  E5  |  76  |  4C  |
 |        Touch         |  F5  |  77  |  4D  |
 |        Latch         | F#5  |  78  |  4E  |
 |        Group         |  G5  |  79  |  4F  |
+|                      |      |      |      |
 |         Save         | G#5  |  80  |  50  |
 |         Undo         |  A5  |  81  |  51  |
 |        Cancel        | A#5  |  82  |  52  |

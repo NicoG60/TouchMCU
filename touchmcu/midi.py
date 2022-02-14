@@ -223,3 +223,34 @@ def midi_vu(ch):
 
     return [vu]
 
+def midi_timecode(start=0x40, end=0x49):
+    r = []
+
+    for ch in [0, 15]:
+        for cc in range(start, end+1):
+            msg = MidiMessage()
+            msg.send = False
+            msg.receive = True
+            msg.triggers["touch"] = Condition.ANY
+            msg.type = MidiMessageType.CONTROL_CHANGE
+            msg.channel = ch
+            msg.data1 = cc
+            msg.data2 = 0
+            msg.values.append({
+                "type": MessageValues.Type.CONSTANT,
+                "key": ""
+            })
+            msg.values.append({
+                "type": MessageValues.Type.CONSTANT,
+                "key": ""
+            })
+            msg.values.append({
+                "type": MessageValues.Type.VALUE,
+                "key": "touch",
+                "min": 0,
+                "max": 1
+            })
+
+            r.append(msg)
+            
+    return r

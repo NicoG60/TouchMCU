@@ -1,3 +1,5 @@
+from touchmcu import load_all_scripts
+from touchmcu.midi import midi_timecode
 from touchmcu.controls import create_button, create_led_button, create_led, create_fader
 from touchmcu.touchosc import ButtonType, Color, Font, OutlineStyle, ColorEnum, Rect
 from touchmcu.touchosc.controls import Group, Label
@@ -18,11 +20,25 @@ def create_timecode(parent, overlay):
         frame=Rect(x=0, y=2, w=202, h=60),
         font=Font.MONOSPACE,
         textSize=24,
-        textLength=13,
+        textLength=19,
         textColor=ColorEnum.RED,
         outlineStyle=OutlineStyle.EDGES
     )
     tc["text"] = "000.00.00.000"
+    tc.messages.extend(midi_timecode())
+
+    header="""
+--------------------------------------------------------------------------------
+-- Change that to match the range of CC to listen to
+local start=0x40
+local stop =0x49
+--------------------------------------------------------------------------------
+
+"""
+    tc["script"] = header + load_all_scripts(
+        "bit_utils.lua",
+        "timecode.lua"
+    )
 
     lb_smpte = Label(
         parent=root,
@@ -187,6 +203,20 @@ def create_assignment(parent, overlay):
         textColor=ColorEnum.RED.value,
     )
     assign_lcd["text"] = ""
+    assign_lcd.messages.extend(midi_timecode(start=0x4A, end=0x4B))
+
+    header="""
+--------------------------------------------------------------------------------
+-- Change that to match the range of CC to listen to
+local start=0x4A
+local stop =0x4B
+--------------------------------------------------------------------------------
+
+"""
+    assign_lcd["script"] = header + load_all_scripts(
+        "bit_utils.lua",
+        "timecode.lua"
+    )
 
     return root
 

@@ -8,6 +8,7 @@ from touchmcu.touchosc.midi import MidiNotes
 
 from touchmcu import load_all_scripts, load_overlay
 from touchmcu.track import create_track
+from touchmcu.transport import create_automation, create_function_select, create_global_view, create_modifiers, create_utilities
 
 
 
@@ -73,6 +74,23 @@ transport_page = Page(
         h=pager["frame"]["h"] - pager["tabbarSize"]
     )
 )
+
+global_view = create_global_view(transport_page, overlay)
+global_view["frame"].move(2, 2)
+
+functions = create_function_select(transport_page, overlay)
+functions["frame"].move(2, 122)
+
+modifiers = create_modifiers(transport_page, overlay)
+modifiers["frame"].move(2, 242)
+
+automation = create_automation(transport_page, overlay)
+automation["frame"].move(202, 242)
+
+utilities = create_utilities(transport_page, overlay)
+utilities["frame"].move(482, 242)
+
+# ==============================================================================
 
 doc.finalise()
 doc.save_clear("./touchMCU.xml")

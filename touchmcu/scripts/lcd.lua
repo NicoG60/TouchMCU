@@ -3,11 +3,6 @@ local content = string.rep(" ", 56*2)
 
 function init()
   lcds = self:findAllByName("lcd", true)
-
-  -- sanity check
-  for k, v in ipairs(lcds) do
-    print(k, v)
-  end
 end
 
 function onReceiveMIDI(message, connections)
