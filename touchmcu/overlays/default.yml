@@ -1,0 +1,102 @@
+# Tracks buttons
+rec: REC
+mute: MUTE
+solo: SOLO
+sel: SEL
+
+# Timecode zone
+smpte: SMPTE
+beats: BEATS
+rude_solo: RUDE SOLO
+
+# VPOT Assignment
+vpot_assignment: VPOT Assign
+track: Track
+send: Send
+pan: Pan
+plugin: Plugin
+eq:  EQ
+instruments: Instr
+
+# Fader Banks
+fader_banks: Fader Banks
+bank_left: < BK
+bank_right: BK >
+channel_left: < CH
+channel_right: CH >
+flip: Flip
+global_view: Glob
+
+# Display
+display: Display
+name_value1: Name
+name_value2: Value
+smpte_beats1: SMPTE
+smpte_beats2: BEATS
+
+# Functions
+function_select: Function Select
+f1: F1
+f2: F2
+f3: F3
+f4: F4
+f5: F5
+f6: F6
+f7: F7
+f8: F8
+
+# Global View
+global_view_header: Global View
+midi_tracks: MIDI
+inputs: Ins
+audio_tracks: Audio
+audio_instrument: Instr
+aux: Aux
+busses: Bus
+outputs: Outs
+user: User
+
+# Modifiers
+modifiers: Modifiers
+shift: Shift
+option: Opt
+control: Ctrl
+
+# Automation
+automation: Automation
+read_off: Read
+write: Write
+trim: Trim
+touch: Touch
+latch: Latch
+group: Group
+
+# Utilities
+utilities: Utilities
+save: Save
+undo: Undo
+cancel: Cancel
+enter: Enter
+
+# Transport
+markers: Markers
+nudge: Nudge
+cycle: Cycle
+drop: Drop
+replace: Replace
+click: Click
+tr_solo: Solo
+
+rewind: '<<'
+forward: '>>'
+stop: ◼︎
+play: ▶︎
+record: ●
+
+up: ▲
+down: ▼
+left: ◀︎
+right: ▶︎
+zoom: Zoom
+
+scrub: Scrub
