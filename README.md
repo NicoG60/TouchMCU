@@ -10,6 +10,8 @@ as a MIDI device and make full use of Mackie Control features from your iPad.
 This is the child project from my older [OscMackieControl](https://github.com/NicoG60/OscMackieControl) which can safely
 retire now TouchOSC handles most of the logic for me.
 
+I wrote an extensive reference documentation of the [Mackie Control Protocol](./doc/Mackie Control Protocol.md)
+
 **This is still work in progress! But the release will come soon**
 
 ![Demo](./screenshot.png)
