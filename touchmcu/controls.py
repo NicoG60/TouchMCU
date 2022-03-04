@@ -27,10 +27,13 @@ def create_button(parent,
                          note,
                          frame=Rect(x=0, y=0, w=46, h=46),
                          color=ColorEnum.GREY,
+                         labelColor=ColorEnum.WHITE,
                          type=ButtonType.TOGGLE_PRESS,
                          label=None,
                          label1=None,
-                         label2=None):
+                         label2=None,
+                         textSize=14,
+                         textSize2=12):
 
     btn = Button(
         parent=parent,
@@ -50,6 +53,8 @@ def create_button(parent,
             frame=frame,
             outline=False,
             background=False,
+            textSize=textSize,
+            textColor=labelColor
         )
         lb["text"] = label
 
@@ -62,7 +67,8 @@ def create_button(parent,
             frame=lb1_frame,
             outline=False,
             background=False,
-            textSize=12
+            textSize=textSize2,
+            textColor=labelColor
         )
         lb1["text"] = label1
 
@@ -77,7 +83,8 @@ def create_button(parent,
             frame=lb2_frame,
             outline=False,
             background=False,
-            textSize=12
+            textSize=textSize2,
+            textColor=labelColor
         )
         lb2["text"] = label2
 
