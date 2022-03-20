@@ -12,9 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install Deps
-        run: |
-          pip install --user pipenv
-          pipenv install 
+        run: pip install lxml pyyaml
       
       - name: Run
         run: pipenv run python -m touchmcu --all
