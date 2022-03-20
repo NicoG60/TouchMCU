@@ -1,0 +1,104 @@
+overlay_title: Tracktion
+
+# Tracks buttons
+rec: REC
+mute: MUTE
+solo: SOLO
+sel: SEL
+
+# Timecode zone
+smpte: SMPTE
+beats: BEATS
+rude_solo: RUDE SOLO
+
+# VPOT Assignment
+vpot_assignment: VPOT Assign
+track: Pan
+send: Aux
+pan: Plugin
+plugin: Marker
+eq:  Page L
+instruments: Page R
+
+# Fader Banks
+fader_banks: Fader Banks
+bank_left: < BK
+bank_right: BK >
+channel_left: < CH
+channel_right: CH >
+flip: Flip
+global_view: Edit
+
+# Display
+timecode: Timecode
+display: Display
+name_value1: CPU
+name_value2: '%'
+smpte_beats1: SMPTE
+smpte_beats2: BEATS
+
+# Functions
+function_select: ' '
+f1: Filters
+f2: Mast. Filt.
+f3: Mark In
+f4: Mark Out
+f5: Cut
+f6: Copy
+f7: Paste
+f8: Delete
+
+# Global View
+global_view_header: Global View
+midi_tracks: Fit All
+inputs: Zoom Out
+audio_tracks: Prev Mrk
+audio_instrument: Next Mrk
+aux: Tempo Ch.
+busses: Project
+outputs: Settings
+user: Exit
+
+# Actions
+actions: Utilities
+
+shift: Shift
+option: + Marker
+control: < Nu.
+alt: Nu. >
+
+read_off: Meters
+write: Rack
+trim: Filter
+touch: Save
+latch: Undo
+group: Redo
+
+save: Auto Rec
+undo: auto Play
+cancel: Cl. Peaks
+enter: Frz Track
+
+# Transport
+transport: Transport
+markers: Loop
+nudge: Punch
+cycle: Click
+drop: Snap
+replace: End To Fnd
+click: Scroll
+tr_solo: MTC Chase
+
+rewind: ◀◀
+forward: ▶▶
+stop: ◼
+play: ▶
+record: ●
+
+up: ▲
+down: ▼
+left: ◀
+right: ▶
+zoom: Zoom
+
+scrub: Scrub

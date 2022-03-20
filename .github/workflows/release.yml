@@ -1,0 +1,53 @@
+name: Release
+on: push
+
+jobs:
+  build:
+    name: Build
+
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Get sources
+        uses: actions/checkout@v2
+
+      - name: Install Deps
+        run: |
+          pip install --user pipenv
+          pipenv sync 
+      
+      - name: Run
+        run: pipenv run python -m touchmcu --all
+
+      - name: Save Artifact
+        if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: layouts
+          path: output/*
+          if-no-files-found: error
+          retention-days: 1
+
+  release:
+    name: Release
+
+    needs: build
+
+    runs-on: ubuntu-20.04
+
+    if: ${{ startsWith(github.ref, 'refs/tags/v') }}
+
+    steps:
+      - name: Sanity Clean
+        run: rm -rf artifacts
+
+      - name: Get Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: layouts
+
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: '*.tosc'

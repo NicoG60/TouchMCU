@@ -1,0 +1,104 @@
+overlay_title: Digital_Performer
+
+# Tracks buttons
+rec: REC
+mute: MUTE
+solo: SOLO
+sel: SEL
+
+# Timecode zone
+smpte: SMPTE
+beats: BEATS
+rude_solo: RUDE SOLO
+
+# VPOT Assignment
+vpot_assignment: VPOT Assign
+track: Mode
+send: Send
+pan: Pan
+plugin: FX
+eq: ' '
+instruments: Preset
+
+# Fader Banks
+fader_banks: Fader Banks
+bank_left: < BK
+bank_right: BK >
+channel_left: < CH
+channel_right: CH >
+flip: Flip
+global_view: Edit
+
+# Display
+timecode: Timecode
+display: Display
+name_value1: Level
+name_value2: Meters
+smpte_beats1: Time
+smpte_beats2: Format
+
+# Functions
+function_select: 'Dialog - Track Groups - Windows'
+f1: Ent.
+f2: Esc.
+f3: Group
+f4: UnGrp
+f5: Susp.
+f6: Seq.
+f7: Track
+f8: Mixer
+
+# Global View
+global_view_header: 'Record & Transport'
+midi_tracks: Click
+inputs: C. Off
+audio_tracks: Overdub
+audio_instrument: Patch
+aux: Clear
+busses: Sl. Sync
+outputs: M. Link
+user: Roll
+
+# Actions
+actions: Utilities
+
+shift: Shift
+option: Opt
+control: Ctrl
+alt: Cmd
+
+read_off: Read
+write: Touch
+trim: Trim T.
+touch: Overwrite
+latch: Latch
+group: Trim L.
+
+save: Save
+undo: Aud. Mode
+cancel: Undo
+enter: Redo
+
+# Transport
+transport: ' '
+markers: RTZ
+nudge: Marker
+cycle: Grid
+drop: Cycle
+replace: Punch
+click: Select
+tr_solo: Solo
+
+rewind: ◀◀
+forward: ▶▶
+stop: ◼
+play: ▶
+record: ●
+
+up: ▲
+down: ▼
+left: ◀
+right: ▶
+zoom: Zoom
+
+scrub: Scrub

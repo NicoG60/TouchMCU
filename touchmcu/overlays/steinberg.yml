@@ -16,7 +16,7 @@ vpot_assignment: VPOT Assign
 track: Up
 send: Down
 pan: Pan
-plugin: 
+plugin: ' '
 eq:  EQ
 instruments: Fx/Aux
 
@@ -59,15 +59,14 @@ busses: '6'
 outputs: '7'
 user: '8'
 
-# Modifiers
-modifiers: ''
+# Actions
+actions: Utilities
+
 shift: Undo
 option: Redo
 control: Save
 alt: Revert
 
-# Automation
-automation: ''
 read_off: Read
 write: Write
 trim: Sends
@@ -75,8 +74,6 @@ touch: Project
 latch: Mixer
 group: Motors
 
-# Utilities
-utilities: ''
 save: Instr
 undo: Master
 cancel: Solo D
@@ -92,8 +89,8 @@ replace: Prev
 click: Add
 tr_solo: Next
 
-rewind: '<<'
-forward: '>>'
+rewind: ◀◀
+forward: ▶▶
 stop: ◼
 play: ▶
 record: ●

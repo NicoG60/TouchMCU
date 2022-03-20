@@ -1,4 +1,4 @@
-overlay_title: Default
+overlay_title: Sonar
 
 # Tracks buttons
 rec: REC
@@ -18,7 +18,7 @@ send: Send
 pan: Pan
 plugin: Plugin
 eq:  EQ
-instruments: Instr
+instruments: Comp
 
 # Fader Banks
 fader_banks: Fader Banks
@@ -27,7 +27,7 @@ bank_right: BK >
 channel_left: < CH
 channel_right: CH >
 flip: Flip
-global_view: Glob
+global_view: Edit
 
 # Display
 timecode: Timecode
@@ -39,55 +39,55 @@ smpte_beats2: BEATS
 
 # Functions
 function_select: Function Select
-f1: F1
-f2: F2
-f3: F3
-f4: F4
-f5: F5
-f6: F6
-f7: F7
-f8: F8
+f1: F1/Cut
+f2: F2/Copy
+f3: F3/Paste
+f4: F4/Del
+f5: F5/Space
+f6: F6/Alt
+f7: F7/Tab
+f8: F8/Back
 
 # Global View
-global_view_header: Global View
-midi_tracks: MIDI
-inputs: Ins
-audio_tracks: Audio
-audio_instrument: Instr
-aux: Aux
-busses: Bus
-outputs: Outs
-user: User
+global_view_header: ' '
+midi_tracks: + Audio
+inputs: + Midi
+audio_tracks: Fit Tr.
+audio_instrument: Fit Pro.
+aux: Ok/Enter
+busses: Cancel
+outputs: Next Win.
+user: Close
 
 # Actions
 actions: Utilities
 
-shift: Shift
-option: Opt
-control: Ctrl
-alt: Cmd
+shift: M1
+option: M2
+control: M3
+alt: M4
 
 read_off: Read
-write: Write
-trim: Trim
-touch: Touch
-latch: Latch
-group: Group
+write: Snap
+trim: Track
+touch: Disarm
+latch: Offset
+group: Save
 
-save: Save
-undo: Undo
-cancel: Cancel
-enter: Enter
+save: Aux
+undo: Main
+cancel: Undo
+enter: Redo
 
 # Transport
 transport: Transport
 markers: Markers
-nudge: Nudge
-cycle: Cycle
-drop: Drop
-replace: Replace
-click: Click
-tr_solo: Solo
+nudge: Loop
+cycle: Select
+drop: Punch
+replace: Jog
+click: Lp On/Off
+tr_solo: Home
 
 rewind: ◀◀
 forward: ▶▶

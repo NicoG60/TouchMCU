@@ -1,0 +1,104 @@
+overlay_title: Pro_Tools
+
+# Tracks buttons
+rec: REC
+mute: MUTE
+solo: SOLO
+sel: SEL
+
+# Timecode zone
+smpte: SMPTE
+beats: BEATS
+rude_solo: RUDE SOLO
+
+# VPOT Assignment
+vpot_assignment: VPOT Assign
+track: Pan
+send: Plugin
+pan: Assign
+plugin: Send
+eq: In
+instruments: Out
+
+# Fader Banks
+fader_banks: Fader Banks
+bank_left: < BK
+bank_right: BK >
+channel_left: < CH
+channel_right: CH >
+flip: V-Sel
+global_view: Ins.
+
+# Display
+timecode: Timecode
+display: Meters
+name_value1: Meters
+name_value2: ' '
+smpte_beats1: Clear
+smpte_beats2: Peaks
+
+# Functions
+function_select: Utilities
+f1: Exit
+f2: Mix
+f3: Trans.
+f4: M. Loc.
+f5: Alt V.
+f6: Cut
+f7: Sep.
+f8: Paste
+
+# Global View
+global_view_header: Automation
+midi_tracks: Read
+inputs: Write
+audio_tracks: Touch
+audio_instrument: Latch
+aux: Trim
+busses: 'Off'
+outputs: Auto
+user: Default
+
+# Actions
+actions: ' '
+
+shift: Shift
+option: Opt
+control: Ctrl
+alt: Cmd
+
+read_off: Fader
+write: Mute
+trim: Plugin
+touch: Pan
+latch: Send
+group: Sd Mute
+
+save: Save
+undo: Undo
+cancel: Cancel
+enter: Enter
+
+# Transport
+transport: Transport
+markers: In
+nudge: Out
+cycle: Loop
+drop: Online
+replace: Trans. F.
+click: Cue MGR
+tr_solo: Susp.
+
+rewind: ◀◀
+forward: ▶▶
+stop: ◼
+play: ▶
+record: ●
+
+up: ▲
+down: ▼
+left: ◀
+right: ▶
+zoom: Zoom
+
+scrub: Scrub

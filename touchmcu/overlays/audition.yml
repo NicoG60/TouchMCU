@@ -1,0 +1,104 @@
+overlay_title: Adobe Audition
+
+# Tracks buttons
+rec: REC
+mute: MUTE
+solo: SOLO
+sel: SEL
+
+# Timecode zone
+smpte: SMPTE
+beats: BEATS
+rude_solo: RUDE SOLO
+
+# VPOT Assignment
+vpot_assignment: VPOT Assign
+track: ' '
+send:  ' '
+pan: Pan
+plugin:  ' '
+eq:  EQ
+instruments:  ' '
+
+# Fader Banks
+fader_banks: Fader Banks
+bank_left: < BK
+bank_right: BK >
+channel_left: < CH
+channel_right: CH >
+flip: 1-8
+global_view: 121-128
+
+# Display
+timecode: Timecode
+display: ' '
+name_value1: Undo
+name_value2: ' '
+smpte_beats1: Redo
+smpte_beats2: ' '
+
+# Functions
+function_select: Edit View Commands
+f1: Copy
+f2: Cut
+f3: Paste
+f4: Trim
+f5: Freq.
+f6: Phase
+f7: Spec.
+f8: Insert
+
+# Global View
+global_view_header: Global Commands
+midi_tracks: View
+inputs: Mon.
+audio_tracks: Cue
+audio_instrument: List
+aux: All
+busses: Full
+outputs: Close
+user: Save
+
+# Actions
+actions: Utilities
+
+shift: Mixer
+option: Prop.
+control: EQ
+alt: Org.
+
+read_off: Next
+write: Split
+trim: Trig.
+touch: Remove
+latch: Metro.
+group: < Cur.
+
+save: SMPTE S
+undo: SMPTE M
+cancel: < Nu.
+enter: Nu. >
+
+# Transport
+transport: Transport
+markers: Play ▶
+nudge: Play >
+cycle: Play ∞
+drop: Punch In
+replace: Anchor L
+click: Anchor R
+tr_solo: Disable
+
+rewind: ◀◀
+forward: ▶▶
+stop: ◼
+play: ▶
+record: ●
+
+up: ▲
+down: ▼
+left: ◀
+right: ▶
+zoom: Zoom
+
+scrub: Scrub

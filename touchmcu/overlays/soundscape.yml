@@ -1,4 +1,4 @@
-overlay_title: Default
+overlay_title: Soundscape
 
 # Tracks buttons
 rec: REC
@@ -13,12 +13,12 @@ rude_solo: RUDE SOLO
 
 # VPOT Assignment
 vpot_assignment: VPOT Assign
-track: Track
+track: I/O
 send: Send
 pan: Pan
 plugin: Plugin
 eq:  EQ
-instruments: Instr
+instruments: Dyn
 
 # Fader Banks
 fader_banks: Fader Banks
@@ -27,7 +27,7 @@ bank_right: BK >
 channel_left: < CH
 channel_right: CH >
 flip: Flip
-global_view: Glob
+global_view: Edit
 
 # Display
 timecode: Timecode
@@ -49,15 +49,15 @@ f7: F7
 f8: F8
 
 # Global View
-global_view_header: Global View
-midi_tracks: MIDI
-inputs: Ins
-audio_tracks: Audio
-audio_instrument: Instr
-aux: Aux
-busses: Bus
-outputs: Outs
-user: User
+global_view_header:  ' '
+midi_tracks: F9
+inputs: F10
+audio_tracks: F11
+audio_instrument: F12
+aux: F13
+busses: F14
+outputs: F15
+user: F16
 
 # Actions
 actions: Utilities
@@ -65,29 +65,29 @@ actions: Utilities
 shift: Shift
 option: Opt
 control: Ctrl
-alt: Cmd
+alt: Alt
 
-read_off: Read
-write: Write
-trim: Trim
-touch: Touch
-latch: Latch
-group: Group
+read_off: 'On'
+write: Rec/Rdy
+trim: Undo
+touch: Snap
+latch: Touch
+group: Redo
 
-save: Save
-undo: Undo
-cancel: Cancel
-enter: Enter
+save: Cancel
+undo: Enter
+cancel: Marker
+enter: Mixer
 
 # Transport
 transport: Transport
-markers: Markers
-nudge: Nudge
-cycle: Cycle
-drop: Drop
-replace: Replace
-click: Click
-tr_solo: Solo
+markers: < FRM
+nudge: FRM >
+cycle: Loop
+drop: PI
+replace: PO
+click: Home
+tr_solo: End
 
 rewind: ◀◀
 forward: ▶▶

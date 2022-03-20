@@ -69,137 +69,62 @@ def create_function_select(parent, overlay):
     return root
 
 
-def create_modifiers(parent, overlay):
+def create_actions(parent, overlay):
     root = Group(
         parent=parent,
-        name="modifiers"
+        name="actions"
     )
-    root["frame"].resize(180, 160)
+    root["frame"].resize(660, 160)
 
     label = Label(
         parent=root,
-        name="lb_modifier",
+        name="lb_actions",
         color=ColorEnum.GREY,
         outline=True,
         outlineStyle=OutlineStyle.EDGES,
-        frame=Rect(x=0, y=0, w=180, h=20)
+        frame=Rect(x=0, y=0, w=660, h=20)
     )
-    label["text"] = overlay["modifiers"]
+    label["text"] = overlay["actions"]
 
-    keys=["shift", "option", "control", "alt"]
+    keys = [
+        ["shift", "option", "read_off", "write", "trim", "save", "undo"],
+        ["control", "alt", "touch", "latch", "group", "cancel", "enter"]
+    ]
 
-    for i in range(4):
-        if i < 2:
-            x = 20+i*80
-            y = 40
-        else:
-            x = 20+(i-2)*80
-            y = 100
-        create_button(
-            parent=root,
-            name=keys[i],
-            note=MidiNotes.ASharp_4 + i,
-            frame=Rect(x=x, y=y, w=60, h=40),
-            label=overlay[keys[i]],
-            type=ButtonType.MOMENTARY
-        )
+    notes = [
+        [MidiNotes.ASharp_4, MidiNotes.B_4, MidiNotes.D_5, MidiNotes.DSharp_5, MidiNotes.E_5, MidiNotes.GSharp_5, MidiNotes.A_5],
+        [MidiNotes.C_5, MidiNotes.CSharp_5, MidiNotes.F_5, MidiNotes.FSharp_5, MidiNotes.G_5, MidiNotes.ASharp_5, MidiNotes.B_5]
+    ]
 
-    return root
+    led_color = [
+        [None, None, ColorEnum.GREEN, ColorEnum.RED, ColorEnum.RED, ColorEnum.RED, ColorEnum.GREEN],
+        [None, None, ColorEnum.RED, ColorEnum.RED, ColorEnum.GREEN, None, None]
+    ]
 
+    for x in range(7):
+        for y in range(2):
+            k = keys[y][x]
+            n = notes[y][x]
+            c = led_color[y][x]
 
-def create_utilities(parent, overlay):
-    root = Group(
-        parent=parent,
-        name="utilities"
-    )
-    root["frame"].resize(180, 160)
-
-    label = Label(
-        parent=root,
-        name="lb_utilities",
-        color=ColorEnum.GREY,
-        outline=True,
-        outlineStyle=OutlineStyle.EDGES,
-        frame=Rect(x=0, y=0, w=180, h=20)
-    )
-    label["text"] = overlay["utilities"]
-
-
-    create_led_button(
-        parent=root,
-        name="save",
-        note=MidiNotes.GSharp_5,
-        frame=Rect(x=20, y=40, w=60, h=40),
-        label1=overlay["save"],
-        color=ColorEnum.RED
-    )
-
-    create_led_button(
-        parent=root,
-        name="undo",
-        note=MidiNotes.A_5,
-        frame=Rect(x=100, y=40, w=60, h=40),
-        label1=overlay["undo"],
-        color=ColorEnum.GREEN
-    )
-
-
-    create_button(
-        parent=root,
-        name="cancel",
-        note=MidiNotes.ASharp_5,
-        frame=Rect(x=20, y=100, w=60, h=40),
-        label=overlay["cancel"],
-        type=ButtonType.MOMENTARY
-    )
-
-    create_button(
-        parent=root,
-        name="enter",
-        note=MidiNotes.B_5,
-        frame=Rect(x=100, y=100, w=60, h=40),
-        label=overlay["enter"],
-        type=ButtonType.MOMENTARY
-    )
-
-    return root
-
-
-def create_automation(parent, overlay):
-    root = Group(
-        parent=parent,
-        name="automation"
-    )
-    root["frame"].resize(260, 160)
-
-    label = Label(
-        parent=root,
-        name="lb_automation",
-        color=ColorEnum.GREY,
-        outline=True,
-        outlineStyle=OutlineStyle.EDGES,
-        frame=Rect(x=0, y=0, w=260, h=20)
-    )
-    label["text"] = overlay["automation"]
-
-    keys=["read_off", "write", "trim", "touch", "latch", "group"]
-    colors=[ColorEnum.GREEN, ColorEnum.RED, ColorEnum.RED, ColorEnum.RED, ColorEnum.RED, ColorEnum.GREEN]
-
-    for i in range(6):
-        if i < 3:
-            x = 20+i*80
-            y = 40
-        else:
-            x = 20+(i-3)*80
-            y = 100
-        create_led_button(
-            parent=root,
-            name=keys[i],
-            note=MidiNotes.D_5 + i,
-            frame=Rect(x=x, y=y, w=60, h=40),
-            label1=overlay[keys[i]],
-            color=colors[i]
-        )
+            if c is not None:
+                create_led_button(
+                    parent=root,
+                    name=k,
+                    note=n,
+                    frame=Rect(x=30+x*90, y=40+y*60, w=60, h=40),
+                    label1=overlay[k],
+                    color=c
+                )
+            else:
+                create_button(
+                    parent=root,
+                    name=k,
+                    note=n,
+                    frame=Rect(x=30+x*90, y=40+y*60, w=60, h=40),
+                    label=overlay[k],
+                    type=ButtonType.MOMENTARY
+                )
 
     return root
 
@@ -221,34 +146,19 @@ def create_transport(parent, overlay):
     )
     label["text"] = overlay["transport"]
 
-    for i, k in enumerate(["markers", "nudge"]):
+    keys = ["markers", "nudge", "cycle", "drop", "replace", "click", "tr_solo"]
+    led_colors = [ColorEnum.GREEN, ColorEnum.GREEN, ColorEnum.GREEN, ColorEnum.RED, ColorEnum.RED, ColorEnum.GREEN, ColorEnum.RED]
+
+    for i in range(7):
+        k = keys[i]
+        c = led_colors[i]
         create_led_button(
             parent=root,
             name=k,
             note=MidiNotes.C_6 + i,
-            frame=Rect(x=20+i*80, y=40, w=60, h=40),
+            frame=Rect(x=30+i*90, y=40, w=60, h=40),
             label1=overlay[k],
-            color=ColorEnum.GREEN
-        )
-
-    for i, k in enumerate(["cycle", "drop", "replace"]):
-        create_led_button(
-            parent=root,
-            name=k,
-            note=MidiNotes.D_6 + i,
-            frame=Rect(x=220+i*80, y=40, w=60, h=40),
-            label1=overlay[k],
-            color=ColorEnum.GREEN if i == 0 else ColorEnum.RED
-        )
-
-    for i, k in enumerate(["click", "tr_solo"]):
-        create_led_button(
-            parent=root,
-            name=k,
-            note=MidiNotes.F_6 + i,
-            frame=Rect(x=500+i*80, y=40, w=60, h=40),
-            label1=overlay[k],
-            color=ColorEnum.GREEN if i == 0 else ColorEnum.RED
+            color=c
         )
 
     create_button(

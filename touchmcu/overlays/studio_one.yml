@@ -1,4 +1,4 @@
-overlay_title: Default
+overlay_title: Studio_One
 
 # Tracks buttons
 rec: REC
@@ -12,13 +12,13 @@ beats: BEATS
 rude_solo: RUDE SOLO
 
 # VPOT Assignment
-vpot_assignment: VPOT Assign
-track: Track
-send: Send
-pan: Pan
-plugin: Plugin
-eq:  EQ
-instruments: Instr
+vpot_assignment: Recording
+track: Lp In
+send: Lp Out
+pan: Rec T
+plugin: Layers
+eq:  Mix
+instruments: Panel
 
 # Fader Banks
 fader_banks: Fader Banks
@@ -32,21 +32,21 @@ global_view: Glob
 # Display
 timecode: Timecode
 display: Display
-name_value1: Name
-name_value2: Value
+name_value1: Melo ^
+name_value2: Melo x
 smpte_beats1: SMPTE
 smpte_beats2: BEATS
 
 # Functions
 function_select: Function Select
-f1: F1
-f2: F2
-f3: F3
-f4: F4
-f5: F5
-f6: F6
-f7: F7
-f8: F8
+f1: Views
+f2: Edit
+f3: Cons
+f4: Insp
+f5: Instr
+f6: FX
+f7: Pool
+f8: Files
 
 # Global View
 global_view_header: Global View
@@ -63,21 +63,21 @@ user: User
 actions: Utilities
 
 shift: Shift
-option: Opt
-control: Ctrl
-alt: Cmd
+option: Quant
+control: + Inst
+alt: + Audio
 
 read_off: Read
 write: Write
 trim: Trim
 touch: Touch
 latch: Latch
-group: Group
+group: Show
 
 save: Save
 undo: Undo
-cancel: Cancel
-enter: Enter
+cancel: Copy
+enter: Paste
 
 # Transport
 transport: Transport
