@@ -15,7 +15,7 @@ jobs:
         run: pip install lxml pyyaml
       
       - name: Run
-        run: pipenv run python -m touchmcu --all
+        run: python -m touchmcu --all
 
       - name: Save Artifact
         if: ${{ startsWith(github.ref, 'refs/tags/v') }}
