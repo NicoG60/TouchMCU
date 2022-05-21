@@ -77,7 +77,7 @@ def create_vu(parent, trackid):
     root["frame"].resize(14, 12*14)
 
 
-    root.messages.extend(midi_vu(trackid))
+    root.messages.extend(midi_vu())
 
 
     # This is a lua header that declare on which track the vu meter is

@@ -13,14 +13,14 @@ function onReceiveMIDI(message, connections)
   -- some byte manipulation here,
   -- - the 4 msb are the track number
   -- - the 4 lsb are the value
-  local rtrack = math.floor(data1 / 2^4)
+  local rtrack = math.floor(data1 / 16)
   
   -- Not me, skip
   if rtrack ~= track then
     return
   end
   
-  local value = data1 - (rtrack * 2^4)
+  local value = data1 - (rtrack * 16)
   
   for i = 1, 11, 1 do
     local led = findLed(i)

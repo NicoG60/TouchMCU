@@ -4,6 +4,7 @@
 
 .vscode
 **/.DS_Store
+output
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

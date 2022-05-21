@@ -196,14 +196,14 @@ def midi_fader(note, ch, send=True, receive=True):
 
     return result
 
-def midi_vu(ch):
+def midi_vu():
 
     vu = MidiMessage()
     vu.send = False
     vu.receive = True
     vu.triggers["x"] = Condition.ANY
     vu.type = MidiMessageType.CHANNEL_PRESSURE
-    vu.channel = ch
+    vu.channel = 0
     vu.data1 = 0
     vu.data2 = 0
     vu.values.append({
