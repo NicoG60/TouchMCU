@@ -43,7 +43,7 @@ As this document is meant to be a reference for implementation / programming gui
 - Hexadecimal numbers are in monospace / code style using the `0x` prefix
 - Binary numbers are in monospace / code style using the `0b` prefix
 
-i.e. the same umber in the three representations: 127, `0x7F`, `0b01111111`
+i.e. the same number in the three representations: 127, `0x7F`, `0b01111111`
 
 I will use upper cased letters for hexadecimal numbers and lower cased letter
 when I want to denote a variable part.
