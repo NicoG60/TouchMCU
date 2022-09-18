@@ -375,13 +375,13 @@ All note mapping is on Channel 0 (the first one).
 |                      |      |      |      |
 |          Up          |  C7  |  96  |  60  |
 |         Down         | C#7  |  97  |  61  |
-|        Scrub         |  D7  |  98  |  62  |
-|         Zoom         | D#7  |  99  |  63  |
-|         Left         |  E7  | 100  |  64  |
-|        Right         |  F7  | 101  |  65  |
+|         Left         |  D7  |  98  |  62  |
+|         Right        | D#7  |  99  |  63  |
+|         Zoom         |  E7  | 100  |  64  |
+|         Scrub        |  F7  | 101  |  65  |
 |                      |      |      |      |
-|                      | F#7  | 102  |  66  |
-|                      |  G7  | 103  |  67  |
+|    User switch 1     | F#7  | 102  |  66  |
+|    User switch 2     |  G7  | 103  |  67  |
 |                      |      |      |      |
 |   Fader 1 Touched    | G#7  | 104  |  68  |
 |   Fader 2 Touched    |  A7  | 105  |  69  |
@@ -414,6 +414,8 @@ All note mapping is on Channel 0 (the first one).
 | vPot 6 rotation              | 0            | 21   | 18   |
 | vPot 7 rotation              | 0            | 22   | 16   |
 | vPot 8 rotation              | 0            | 23   | 17   |
+|                              |              |      |      |
+| External control             | 0            | 46   | 2E   |
 |                              |              |      |      |
 | vPot 1 LED ring              | 0            | 48   | 30   |
 | vPot 2 LED ring              | 0            | 49   | 31   |
