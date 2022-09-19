@@ -64,6 +64,13 @@ As a side note, this is to avoid a MIDI note overflow on the DAW. Imagine if it 
 
 In the rest of the document I will use the term *Note Bang* to describe that behaviour.
 
+| LED State | Velocity | Hex    | Remarks                     |
+| --------- | ---------|--------|-----------------------------|
+| Off       | 0        | `0x00` | Any even value              |
+| Blink     | 1        | `0x01` | Any odd value except `0xF7` |
+| Solid     | 127      | `0xF7` |                             |
+
+
 ## Display Zone
 
 ![display_zone](assets/display_zone.png)
