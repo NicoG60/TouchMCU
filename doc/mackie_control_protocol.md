@@ -64,6 +64,13 @@ As a side note, this is to avoid a MIDI note overflow on the DAW. Imagine if it 
 
 In the rest of the document I will use the term *Note Bang* to describe that behaviour.
 
+| LED State | Velocity | Hex    | Remarks                     |
+| --------- | ---------|--------|-----------------------------|
+| Off       | 0        | `0x00` | Any even value              |
+| Blink     | 1        | `0x01` | Any odd value except `0xF7` |
+| Solid     | 127      | `0xF7` |                             |
+
+
 ## Display Zone
 
 ![display_zone](assets/display_zone.png)
@@ -79,13 +86,19 @@ F0 00 00 66 14 12 pp cc cc .. cc F7
 ```
 
 - `0xF0` at the start, `0xF7` at the end: These are the MIDI *System Exclusive* message boundaries. `0xF0` being the MIDI *status* of *SystemExclusive*
-- `0x00` `0x00` `0x66` is the Manufacturer ID (Mackie in that case)
+- `0x00` `0x00` `0x66` is the Manufacturer ID (Mackie Designs in that case)
 - `0x14` is the Product ID (Mackie Control Universal Pro)
 - `0x12` is the LCD identifier any other values would refer to other components (as I understand it).
 - `0xpp` is the location of the first character sent. This value range between `0x00` and `0x6F` (0 to 111 in decimal). 
 - `0xcc 0xcc .. 0xcc` is a list of characters. the first one replace the character position `0xpp`, the second one replacing `0xpp+1` etc...
 
 Character codes are basic ASCII character. There is room for a character set extension here with some special symbols being used but I've not been able to reference them yet.
+
+|  PID   |           Device                  |
+| ------ | --------------------------------- |
+| `0x14` | Mackie Control Universal (Pro)    |
+| `0x15` | Mackie Control Universal XT (Pro) |
+
 
 ### SMPTE, BEATS, Rude Solo
 
